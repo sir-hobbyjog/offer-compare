@@ -29,7 +29,7 @@ export default function PropertySection({ property, onChange, readOnly }: Props)
             onChange={(e) => update("address", e.target.value)}
             placeholder="123 Main St, City, UT"
             readOnly={readOnly}
-            className="w-full px-3 py-2 border border-slate-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-xmre-navy/30 focus:border-xmre-navy"
+            className="w-full px-3 py-2 md:py-2 py-2.5 border border-slate-300 rounded-md text-base md:text-sm focus:outline-none focus:ring-2 focus:ring-xmre-navy/30 focus:border-xmre-navy"
           />
         </div>
         <div>
@@ -44,7 +44,7 @@ export default function PropertySection({ property, onChange, readOnly }: Props)
               onChange={(e) => update("listPrice", Number(e.target.value))}
               placeholder="0"
               readOnly={readOnly}
-              className="w-full pl-7 pr-3 py-2 border border-slate-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-xmre-navy/30 focus:border-xmre-navy"
+              className="w-full pl-7 pr-3 py-2.5 md:py-2 border border-slate-300 rounded-md text-base md:text-sm focus:outline-none focus:ring-2 focus:ring-xmre-navy/30 focus:border-xmre-navy"
             />
           </div>
         </div>
@@ -60,7 +60,7 @@ export default function PropertySection({ property, onChange, readOnly }: Props)
               onChange={(e) => update("mortgageBalance", Number(e.target.value))}
               placeholder="0"
               readOnly={readOnly}
-              className="w-full pl-7 pr-3 py-2 border border-slate-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-xmre-navy/30 focus:border-xmre-navy"
+              className="w-full pl-7 pr-3 py-2.5 md:py-2 border border-slate-300 rounded-md text-base md:text-sm focus:outline-none focus:ring-2 focus:ring-xmre-navy/30 focus:border-xmre-navy"
             />
           </div>
         </div>
@@ -76,7 +76,7 @@ export default function PropertySection({ property, onChange, readOnly }: Props)
               onChange={(e) => update("additionalPayoffs", Number(e.target.value))}
               placeholder="0"
               readOnly={readOnly}
-              className="w-full pl-7 pr-3 py-2 border border-slate-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-xmre-navy/30 focus:border-xmre-navy"
+              className="w-full pl-7 pr-3 py-2.5 md:py-2 border border-slate-300 rounded-md text-base md:text-sm focus:outline-none focus:ring-2 focus:ring-xmre-navy/30 focus:border-xmre-navy"
             />
           </div>
         </div>

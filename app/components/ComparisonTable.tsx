@@ -6,6 +6,7 @@ import {
   calculateNet,
   NetCalculation,
 } from "../lib/types";
+import MobileOfferCard from "./MobileOfferCard";
 
 interface Props {
   offers: Offer[];
@@ -87,7 +88,26 @@ export default function ComparisonTable({
   }
 
   return (
-    <div className="bg-white rounded-lg border border-slate-200 overflow-hidden">
+    <>
+      {/* Mobile: stacked cards */}
+      <div className="md:hidden space-y-4">
+        {offers.map((offer, i) => (
+          <MobileOfferCard
+            key={offer.id}
+            offer={offer}
+            index={i}
+            property={property}
+            isBest={calculations.length > 1 && i === bestNetIndex}
+            totalOffers={offers.length}
+            onUpdate={onUpdateOffer}
+            onRemove={onRemoveOffer}
+            readOnly={readOnly}
+          />
+        ))}
+      </div>
+
+      {/* Desktop: spreadsheet table */}
+      <div className="hidden md:block bg-white rounded-lg border border-slate-200 overflow-hidden">
       <div className="overflow-x-auto offer-scroll">
         <table className="w-full border-collapse">
           {/* Header row with offer names */}
@@ -706,6 +726,7 @@ export default function ComparisonTable({
         </table>
       </div>
     </div>
+    </>
   );
 }
 
