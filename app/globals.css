@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f8fafc;
+  --foreground: #1e293b;
+  --xmre-navy: #1e3a5f;
+  --xmre-gold: #c9a84c;
+  --xmre-light: #f0f4f8;
+  --xmre-green: #16a34a;
+  --xmre-red: #dc2626;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-xmre-navy: var(--xmre-navy);
+  --color-xmre-gold: var(--xmre-gold);
+  --color-xmre-light: var(--xmre-light);
+  --color-xmre-green: var(--xmre-green);
+  --color-xmre-red: var(--xmre-red);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Custom scrollbar for the comparison table */
+.offer-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+.offer-scroll::-webkit-scrollbar-track {
+  background: #e2e8f0;
+  border-radius: 4px;
+}
+.offer-scroll::-webkit-scrollbar-thumb {
+  background: var(--xmre-navy);
+  border-radius: 4px;
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: white;
+  }
+}
+
+/* Input styling */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
