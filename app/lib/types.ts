@@ -32,9 +32,12 @@ export interface ComparisonState {
   offers: Offer[];
 }
 
+let _idCounter = 0;
+
 export function createDefaultOffer(index: number): Offer {
+  _idCounter++;
   return {
-    id: crypto.randomUUID(),
+    id: `offer-${Date.now()}-${_idCounter}`,
     buyerName: `Offer ${index}`,
     offerPrice: 0,
     earnestMoney: 0,

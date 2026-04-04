@@ -12,8 +12,9 @@ import {
   PropertyDetails,
 } from "./lib/types";
 import { decodeState, generateShareUrl } from "./lib/sharing";
+import ErrorBoundary from "./components/ErrorBoundary";
 
-export default function Home() {
+function OfferCompare() {
   const [property, setProperty] = useState<PropertyDetails>(
     createDefaultProperty()
   );
@@ -219,5 +220,13 @@ export default function Home() {
         </p>
       </footer>
     </>
+  );
+}
+
+export default function Home() {
+  return (
+    <ErrorBoundary>
+      <OfferCompare />
+    </ErrorBoundary>
   );
 }
