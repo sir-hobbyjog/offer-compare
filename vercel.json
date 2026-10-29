@@ -1,0 +1,7 @@
+{
+  "git": {
+    "deploymentEnabled": {
+      "codex/sec-nextjs-rce-20261028": false
+    }
+  }
+}
